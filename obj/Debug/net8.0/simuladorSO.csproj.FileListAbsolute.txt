@@ -1,0 +1,14 @@
+C:\Users\richa\Documents\dev\visualStudio\Sistemas Operacionais\simuladorSO\obj\Debug\net8.0\simuladorSO.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\richa\Documents\dev\visualStudio\Sistemas Operacionais\simuladorSO\obj\Debug\net8.0\simuladorSO.AssemblyInfoInputs.cache
+C:\Users\richa\Documents\dev\visualStudio\Sistemas Operacionais\simuladorSO\obj\Debug\net8.0\simuladorSO.AssemblyInfo.cs
+C:\Users\richa\Documents\dev\visualStudio\Sistemas Operacionais\simuladorSO\obj\Debug\net8.0\simuladorSO.csproj.CoreCompileInputs.cache
+C:\Users\richa\Documents\dev\visualStudio\Sistemas Operacionais\SimuladorSO\bin\Debug\net8.0\SimuladorSO.exe
+C:\Users\richa\Documents\dev\visualStudio\Sistemas Operacionais\SimuladorSO\bin\Debug\net8.0\SimuladorSO.deps.json
+C:\Users\richa\Documents\dev\visualStudio\Sistemas Operacionais\SimuladorSO\bin\Debug\net8.0\SimuladorSO.runtimeconfig.json
+C:\Users\richa\Documents\dev\visualStudio\Sistemas Operacionais\SimuladorSO\bin\Debug\net8.0\SimuladorSO.dll
+C:\Users\richa\Documents\dev\visualStudio\Sistemas Operacionais\SimuladorSO\bin\Debug\net8.0\SimuladorSO.pdb
+C:\Users\richa\Documents\dev\visualStudio\Sistemas Operacionais\SimuladorSO\obj\Debug\net8.0\SimuladorSO.dll
+C:\Users\richa\Documents\dev\visualStudio\Sistemas Operacionais\SimuladorSO\obj\Debug\net8.0\refint\SimuladorSO.dll
+C:\Users\richa\Documents\dev\visualStudio\Sistemas Operacionais\SimuladorSO\obj\Debug\net8.0\SimuladorSO.pdb
+C:\Users\richa\Documents\dev\visualStudio\Sistemas Operacionais\SimuladorSO\obj\Debug\net8.0\SimuladorSO.genruntimeconfig.cache
+C:\Users\richa\Documents\dev\visualStudio\Sistemas Operacionais\SimuladorSO\obj\Debug\net8.0\ref\SimuladorSO.dll
