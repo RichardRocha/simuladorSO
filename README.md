@@ -1,3 +1,8 @@
+## Grupo:
+### Nome: Richard Nicholas Rocha | RA: 113760
+### Nome: Arlyson Silva Nascimento | RA: 113627
+### Nome: Kauan Melo | RA: 113471
+
 # Simulador de Sistema Operacional
 
 **SimuladorSO** é uma aplicação desenvolvida em C# que visa a simulação detalhada de escalonamento de processos e gerenciamento de memória em sistemas operacionais. Este projeto oferece uma plataforma para estudo, experimentação e análise de algoritmos clássicos de escalonamento, proporcionando uma visão prática de como os sistemas operacionais gerenciam processos e recursos de memória.
