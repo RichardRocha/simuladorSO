@@ -4,6 +4,8 @@ public class ThreadSimulada
     public Processo ProcessoPai { get; private set; }
     public string Estado { get; set; } = "Pronto"; // Estado da thread
     public int PC { get; set; } = 0; // Contador de programa da thread
+    public int QuantumExecutado { get; set; } = 0; // para RR
+
     public Stack<int> Pilha { get; private set; } = new Stack<int>(); // Pilha lógica simulada
 
     private static int contador = 0;

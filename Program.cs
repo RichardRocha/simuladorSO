@@ -1,26 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-
-namespace SimuladorSO
+﻿namespace SimuladorSO
 {
-    internal class Program
+    public class Program
     {
         static void Main(string[] args)
         {
             Simulador sim = new Simulador();
-
-            sim.GerarProcessos(5);
+            sim.GerarProcessos(3);
             sim.MostrarProcessos();
 
-            Escalonador rr = new RoundRobin(2);
-            sim.Executar(rr);
-
-            Escalonador sjf = new ShortestJobFirst();
-            sim.Executar(sjf);
-
-            Escalonador spn = new ShortestProcessNext();
-            sim.Executar(spn);
+            // Solicitar E/S de uma thread aleatória
+            var primeiraThread = sim.Processos[0].Threads[0];
+            sim.SolicitarES(primeiraThread, "Disco");
 
             Console.WriteLine("\nFim da simulação");
         }

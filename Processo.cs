@@ -4,6 +4,8 @@ public class Processo
     public int TempoChegada { get; set; }
     public int TempoProcessamento { get; set; }
     public int MemoriaNecessaria { get; set; }
+    public int TempoRetorno { get; set; } = 0;
+    public int TempoEspera { get; set; } = 0;
 
     // Estado como string
     public string Estado { get; set; } = "Pronto";
