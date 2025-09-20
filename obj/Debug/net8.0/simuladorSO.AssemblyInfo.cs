@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SimuladorSO")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c7ed70afdac75f10288f9f741584567c6c602360")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+03a037a0b20e98414fd6e104be402505f0a4f030")]
 [assembly: System.Reflection.AssemblyProductAttribute("SimuladorSO")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SimuladorSO")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

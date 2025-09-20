@@ -2,9 +2,12 @@
 {
     public class ShortestProcessNext : Escalonador
     {
-        public ShortestProcessNext()
+        private Simulador sim; // referência do simulador
+
+        public ShortestProcessNext(Simulador simulador)
         {
             Algoritmo = "Shortest Process Next";
+            sim = simulador;
         }
 
         public override void Executar(List<Processo> processos)
@@ -20,9 +23,18 @@
                 {
                     if (t.Estado != "Finalizada")
                     {
+                        // Log início execução
+                        sim.LogEvento($"Thread {t.Id} do processo {p.TempoChegada} começou execução");
+
                         t.Executar();
                         t.PC = p.TempoProcessamento;
                         t.Finalizar();
+
+                        // Log finalização
+                        sim.LogEvento($"Thread {t.Id} finalizou execução do processo {p.TempoChegada}");
+
+                        // Incrementa métricas
+                        sim.IncrementarTrocasDeContexto();
                     }
                 }
             }

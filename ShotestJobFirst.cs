@@ -2,9 +2,12 @@
 {
     public class ShortestJobFirst : Escalonador
     {
-        public ShortestJobFirst()
+        private Simulador sim; // referência do simulador
+
+        public ShortestJobFirst(Simulador simulador)
         {
             Algoritmo = "Shortest Job First";
+            sim = simulador;
         }
 
         public override void Executar(List<Processo> processos)
@@ -25,10 +28,15 @@
             {
                 if (thread.Estado != "Finalizada")
                 {
+                    sim.LogEvento($"Thread {thread.Id} do processo {thread.ProcessoPai.TempoChegada} começou execução");
+
                     thread.Executar();
-                    // Executa até terminar
                     thread.PC = thread.ProcessoPai.TempoProcessamento;
                     thread.Finalizar();
+
+                    sim.LogEvento($"Thread {thread.Id} finalizou execução do processo {thread.ProcessoPai.TempoChegada}");
+
+                    sim.IncrementarTrocasDeContexto(); // atualiza métrica
                 }
             }
 

@@ -125,6 +125,11 @@ namespace SimuladorSO
             Console.WriteLine($"[Clock {DateTime.Now:T}] {evento}");
         }
 
+        public void IncrementarTrocasDeContexto()
+        {
+            TrocasDeContexto++;
+        }
+
 
     }
 }
