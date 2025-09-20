@@ -25,9 +25,17 @@ namespace SimuladorSO
                 int memoriaNecessaria = rnd.Next(1, 30);
 
                 var p = new Processo(chegada, execucao, memoriaNecessaria);
+
+                int numThreads = rnd.Next(1, 4);
+                for (int t = 0; t < numThreads; t++)
+                {
+                    p.CriarThread();
+                }
+
                 processos.Add(p);
             }
         }
+
 
         public void MostrarProcessos()
         {
