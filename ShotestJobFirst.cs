@@ -1,43 +1,35 @@
-﻿namespace SimuladorSO
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+
+namespace SimuladorSO
 {
     public class ShortestJobFirst : Escalonador
     {
-        private Simulador sim; // referência do simulador
+        private Simulador Sim;
 
-        public ShortestJobFirst(Simulador simulador)
+        public ShortestJobFirst(Simulador sim)
         {
+            Sim = sim;
             Algoritmo = "Shortest Job First";
-            sim = simulador;
         }
 
         public override void Executar(List<Processo> processos)
         {
             Console.WriteLine($"\nExecutando escalonador: {Algoritmo}");
 
-            // Criar lista de todas as threads prontas
-            var threads = new List<ThreadSimulada>();
-            foreach (var p in processos)
-            {
-                threads.AddRange(p.Threads);
-            }
+            var processosOrdenados = processos.OrderBy(p => p.TempoProcessamento).ToList();
 
-            // Ordenar threads pelo tempo de processamento do processo pai (menor primeiro)
-            threads = threads.OrderBy(t => t.ProcessoPai.TempoProcessamento).ToList();
-
-            foreach (var thread in threads)
+            foreach (var processo in processosOrdenados)
             {
-                if (thread.Estado != "Finalizada")
+                processo.Estado = "Executando";
+                while (processo.PC < processo.TempoProcessamento)
                 {
-                    sim.LogEvento($"Thread {thread.Id} do processo {thread.ProcessoPai.TempoChegada} começou execução");
-
-                    thread.Executar();
-                    thread.PC = thread.ProcessoPai.TempoProcessamento;
-                    thread.Finalizar();
-
-                    sim.LogEvento($"Thread {thread.Id} finalizou execução do processo {thread.ProcessoPai.TempoChegada}");
-
-                    sim.IncrementarTrocasDeContexto(); // atualiza métrica
+                    processo.PC++;
                 }
+                processo.Estado = "Finalizado";
+                Console.WriteLine($"Processo (Chegada={processo.TempoChegada}) concluído!");
+                Sim.IncrementarTrocasDeContexto();
             }
 
             Console.WriteLine("\nSJF concluído!");

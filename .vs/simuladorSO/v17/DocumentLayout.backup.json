@@ -1,37 +1,37 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\richa\\Documents\\dev\\visualStudio\\Sistemas Operacionais\\SimuladorSO\\",
+  "WorkspaceRootPath": "C:\\Users\\admin\\source\\repos\\simuladorSO\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E29E9E04-A597-4BB6-8FC1-9D4BD2347059}|SimuladorSO.csproj|c:\\users\\richa\\documents\\dev\\visualstudio\\sistemas operacionais\\simuladorso\\gerenciadormemoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E29E9E04-A597-4BB6-8FC1-9D4BD2347059}|SimuladorSO.csproj|solutionrelative:gerenciadormemoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E29E9E04-A597-4BB6-8FC1-9D4BD2347059}|SimuladorSO.csproj|c:\\users\\richa\\documents\\dev\\visualstudio\\sistemas operacionais\\simuladorso\\simulador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E29E9E04-A597-4BB6-8FC1-9D4BD2347059}|SimuladorSO.csproj|solutionrelative:simulador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E29E9E04-A597-4BB6-8FC1-9D4BD2347059}|SimuladorSO.csproj|c:\\users\\richa\\documents\\dev\\visualstudio\\sistemas operacionais\\simuladorso\\escalonador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E29E9E04-A597-4BB6-8FC1-9D4BD2347059}|SimuladorSO.csproj|solutionrelative:escalonador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E29E9E04-A597-4BB6-8FC1-9D4BD2347059}|SimuladorSO.csproj|c:\\users\\richa\\documents\\dev\\visualstudio\\sistemas operacionais\\simuladorso\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E29E9E04-A597-4BB6-8FC1-9D4BD2347059}|SimuladorSO.csproj|c:\\users\\admin\\source\\repos\\simuladorso\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E29E9E04-A597-4BB6-8FC1-9D4BD2347059}|SimuladorSO.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E29E9E04-A597-4BB6-8FC1-9D4BD2347059}|SimuladorSO.csproj|c:\\users\\richa\\documents\\dev\\visualstudio\\sistemas operacionais\\simuladorso\\shortestjobnext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E29E9E04-A597-4BB6-8FC1-9D4BD2347059}|SimuladorSO.csproj|c:\\users\\admin\\source\\repos\\simuladorso\\simulador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E29E9E04-A597-4BB6-8FC1-9D4BD2347059}|SimuladorSO.csproj|solutionrelative:simulador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E29E9E04-A597-4BB6-8FC1-9D4BD2347059}|SimuladorSO.csproj|c:\\users\\admin\\source\\repos\\simuladorso\\escalonador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E29E9E04-A597-4BB6-8FC1-9D4BD2347059}|SimuladorSO.csproj|solutionrelative:escalonador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E29E9E04-A597-4BB6-8FC1-9D4BD2347059}|SimuladorSO.csproj|c:\\users\\admin\\source\\repos\\simuladorso\\shortestjobnext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E29E9E04-A597-4BB6-8FC1-9D4BD2347059}|SimuladorSO.csproj|solutionrelative:shortestjobnext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E29E9E04-A597-4BB6-8FC1-9D4BD2347059}|SimuladorSO.csproj|c:\\users\\richa\\documents\\dev\\visualstudio\\sistemas operacionais\\simuladorso\\shotestjobfirst.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E29E9E04-A597-4BB6-8FC1-9D4BD2347059}|SimuladorSO.csproj|solutionrelative:shotestjobfirst.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E29E9E04-A597-4BB6-8FC1-9D4BD2347059}|SimuladorSO.csproj|c:\\users\\richa\\documents\\dev\\visualstudio\\sistemas operacionais\\simuladorso\\roundrobin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E29E9E04-A597-4BB6-8FC1-9D4BD2347059}|SimuladorSO.csproj|c:\\users\\admin\\source\\repos\\simuladorso\\roundrobin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E29E9E04-A597-4BB6-8FC1-9D4BD2347059}|SimuladorSO.csproj|solutionrelative:roundrobin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E29E9E04-A597-4BB6-8FC1-9D4BD2347059}|SimuladorSO.csproj|c:\\users\\richa\\documents\\dev\\visualstudio\\sistemas operacionais\\simuladorso\\processo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E29E9E04-A597-4BB6-8FC1-9D4BD2347059}|SimuladorSO.csproj|c:\\users\\admin\\source\\repos\\simuladorso\\shotestjobfirst.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E29E9E04-A597-4BB6-8FC1-9D4BD2347059}|SimuladorSO.csproj|solutionrelative:shotestjobfirst.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E29E9E04-A597-4BB6-8FC1-9D4BD2347059}|SimuladorSO.csproj|c:\\users\\admin\\source\\repos\\simuladorso\\gerenciadormemoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E29E9E04-A597-4BB6-8FC1-9D4BD2347059}|SimuladorSO.csproj|solutionrelative:gerenciadormemoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E29E9E04-A597-4BB6-8FC1-9D4BD2347059}|SimuladorSO.csproj|c:\\users\\admin\\source\\repos\\simuladorso\\processo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E29E9E04-A597-4BB6-8FC1-9D4BD2347059}|SimuladorSO.csproj|solutionrelative:processo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -42,7 +42,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 11,
           "Children": [
             {
               "$type": "Bookmark",
@@ -62,47 +62,50 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "ShortestJobNext.cs",
-              "DocumentMoniker": "C:\\Users\\richa\\Documents\\dev\\visualStudio\\Sistemas Operacionais\\SimuladorSO\\ShortestJobNext.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\simuladorSO\\ShortestJobNext.cs",
               "RelativeDocumentMoniker": "ShortestJobNext.cs",
-              "ToolTip": "C:\\Users\\richa\\Documents\\dev\\visualStudio\\Sistemas Operacionais\\SimuladorSO\\ShortestJobNext.cs",
+              "ToolTip": "C:\\Users\\admin\\source\\repos\\simuladorSO\\ShortestJobNext.cs",
               "RelativeToolTip": "ShortestJobNext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAA5wB4AAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-31T13:29:17.098Z"
+              "WhenOpened": "2025-08-31T13:29:17.098Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
               "Title": "ShotestJobFirst.cs",
-              "DocumentMoniker": "C:\\Users\\richa\\Documents\\dev\\visualStudio\\Sistemas Operacionais\\SimuladorSO\\ShotestJobFirst.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\simuladorSO\\ShotestJobFirst.cs",
               "RelativeDocumentMoniker": "ShotestJobFirst.cs",
-              "ToolTip": "C:\\Users\\richa\\Documents\\dev\\visualStudio\\Sistemas Operacionais\\SimuladorSO\\ShotestJobFirst.cs",
+              "ToolTip": "C:\\Users\\admin\\source\\repos\\simuladorSO\\ShotestJobFirst.cs",
               "RelativeToolTip": "ShotestJobFirst.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-31T13:28:59.168Z"
+              "WhenOpened": "2025-08-31T13:28:59.168Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 4,
               "Title": "RoundRobin.cs",
-              "DocumentMoniker": "C:\\Users\\richa\\Documents\\dev\\visualStudio\\Sistemas Operacionais\\SimuladorSO\\RoundRobin.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\simuladorSO\\RoundRobin.cs",
               "RelativeDocumentMoniker": "RoundRobin.cs",
-              "ToolTip": "C:\\Users\\richa\\Documents\\dev\\visualStudio\\Sistemas Operacionais\\SimuladorSO\\RoundRobin.cs",
+              "ToolTip": "C:\\Users\\admin\\source\\repos\\simuladorSO\\RoundRobin.cs",
               "RelativeToolTip": "RoundRobin.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAYAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-31T13:28:27.948Z"
+              "WhenOpened": "2025-08-31T13:28:27.948Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
               "Title": "Processo.cs",
-              "DocumentMoniker": "C:\\Users\\richa\\Documents\\dev\\visualStudio\\Sistemas Operacionais\\SimuladorSO\\Processo.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\simuladorSO\\Processo.cs",
               "RelativeDocumentMoniker": "Processo.cs",
-              "ToolTip": "C:\\Users\\richa\\Documents\\dev\\visualStudio\\Sistemas Operacionais\\SimuladorSO\\Processo.cs",
+              "ToolTip": "C:\\Users\\admin\\source\\repos\\simuladorSO\\Processo.cs",
               "RelativeToolTip": "Processo.cs",
               "ViewState": "AgIAAAoAAAAAAAAAAAA5wAIAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -110,13 +113,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 6,
               "Title": "GerenciadorMemoria.cs",
-              "DocumentMoniker": "C:\\Users\\richa\\Documents\\dev\\visualStudio\\Sistemas Operacionais\\SimuladorSO\\GerenciadorMemoria.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\simuladorSO\\GerenciadorMemoria.cs",
               "RelativeDocumentMoniker": "GerenciadorMemoria.cs",
-              "ToolTip": "C:\\Users\\richa\\Documents\\dev\\visualStudio\\Sistemas Operacionais\\SimuladorSO\\GerenciadorMemoria.cs",
+              "ToolTip": "C:\\Users\\admin\\source\\repos\\simuladorSO\\GerenciadorMemoria.cs",
               "RelativeToolTip": "GerenciadorMemoria.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAqwBUAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-31T13:22:00.17Z",
               "EditorCaption": ""
@@ -125,9 +128,9 @@
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "Escalonador.cs",
-              "DocumentMoniker": "C:\\Users\\richa\\Documents\\dev\\visualStudio\\Sistemas Operacionais\\SimuladorSO\\Escalonador.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\simuladorSO\\Escalonador.cs",
               "RelativeDocumentMoniker": "Escalonador.cs",
-              "ToolTip": "C:\\Users\\richa\\Documents\\dev\\visualStudio\\Sistemas Operacionais\\SimuladorSO\\Escalonador.cs",
+              "ToolTip": "C:\\Users\\admin\\source\\repos\\simuladorSO\\Escalonador.cs",
               "RelativeToolTip": "Escalonador.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -138,26 +141,27 @@
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "Simulador.cs",
-              "DocumentMoniker": "C:\\Users\\richa\\Documents\\dev\\visualStudio\\Sistemas Operacionais\\SimuladorSO\\Simulador.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\simuladorSO\\Simulador.cs",
               "RelativeDocumentMoniker": "Simulador.cs",
-              "ToolTip": "C:\\Users\\richa\\Documents\\dev\\visualStudio\\Sistemas Operacionais\\SimuladorSO\\Simulador.cs",
+              "ToolTip": "C:\\Users\\admin\\source\\repos\\simuladorSO\\Simulador.cs",
               "RelativeToolTip": "Simulador.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAAAC8AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAF8AAAAAAAAAAAA6wIMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-31T13:19:11.894Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\richa\\Documents\\dev\\visualStudio\\Sistemas Operacionais\\SimuladorSO\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\simuladorSO\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\richa\\Documents\\dev\\visualStudio\\Sistemas Operacionais\\SimuladorSO\\Program.cs",
+              "ToolTip": "C:\\Users\\admin\\source\\repos\\simuladorSO\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAgwAEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-31T13:01:48.675Z"
+              "WhenOpened": "2025-08-31T13:01:48.675Z",
+              "EditorCaption": ""
             }
           ]
         }

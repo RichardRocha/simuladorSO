@@ -1,42 +1,51 @@
-﻿namespace SimuladorSO
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+
+namespace SimuladorSO
 {
     public class ShortestProcessNext : Escalonador
     {
-        private Simulador sim; // referência do simulador
+        private Simulador Sim;
 
-        public ShortestProcessNext(Simulador simulador)
+        public ShortestProcessNext(Simulador sim)
         {
+            Sim = sim;
             Algoritmo = "Shortest Process Next";
-            sim = simulador;
         }
 
         public override void Executar(List<Processo> processos)
         {
             Console.WriteLine($"\nExecutando escalonador: {Algoritmo}");
 
-            // Ordena processos pelo tempo de processamento total (menor primeiro)
-            var processosOrdenados = processos.OrderBy(p => p.TempoProcessamento).ToList();
+            var prontos = processos.ToList();
+            int tempoAtual = 0;
 
-            foreach (var p in processosOrdenados)
+            while (prontos.Any(p => p.Estado != "Finalizado"))
             {
-                foreach (var t in p.Threads)
+                var disponiveis = prontos
+                    .Where(p => p.TempoChegada <= tempoAtual && p.Estado != "Finalizado")
+                    .OrderBy(p => p.TempoProcessamento - p.PC)
+                    .ToList();
+
+                if (!disponiveis.Any())
                 {
-                    if (t.Estado != "Finalizada")
-                    {
-                        // Log início execução
-                        sim.LogEvento($"Thread {t.Id} do processo {p.TempoChegada} começou execução");
-
-                        t.Executar();
-                        t.PC = p.TempoProcessamento;
-                        t.Finalizar();
-
-                        // Log finalização
-                        sim.LogEvento($"Thread {t.Id} finalizou execução do processo {p.TempoChegada}");
-
-                        // Incrementa métricas
-                        sim.IncrementarTrocasDeContexto();
-                    }
+                    tempoAtual++;
+                    continue;
                 }
+
+                var processo = disponiveis.First();
+                processo.Estado = "Executando";
+
+                while (processo.PC < processo.TempoProcessamento)
+                {
+                    processo.PC++;
+                    tempoAtual++;
+                }
+
+                processo.Estado = "Finalizado";
+                Console.WriteLine($"Processo (Chegada={processo.TempoChegada}) concluído!");
+                Sim.IncrementarTrocasDeContexto();
             }
 
             Console.WriteLine("\nSPN concluído!");

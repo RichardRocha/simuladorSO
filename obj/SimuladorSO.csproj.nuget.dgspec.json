@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\arlys\\OneDrive\\Documents\\GitHub\\simuladorSO\\SimuladorSO.csproj": {}
+    "C:\\Users\\admin\\Source\\Repos\\simuladorSO\\SimuladorSO.csproj": {}
   },
   "projects": {
-    "C:\\Users\\arlys\\OneDrive\\Documents\\GitHub\\simuladorSO\\SimuladorSO.csproj": {
+    "C:\\Users\\admin\\Source\\Repos\\simuladorSO\\SimuladorSO.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\arlys\\OneDrive\\Documents\\GitHub\\simuladorSO\\SimuladorSO.csproj",
+        "projectUniqueName": "C:\\Users\\admin\\Source\\Repos\\simuladorSO\\SimuladorSO.csproj",
         "projectName": "SimuladorSO",
-        "projectPath": "C:\\Users\\arlys\\OneDrive\\Documents\\GitHub\\simuladorSO\\SimuladorSO.csproj",
-        "packagesPath": "C:\\Users\\arlys\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\arlys\\OneDrive\\Documents\\GitHub\\simuladorSO\\obj\\",
+        "projectPath": "C:\\Users\\admin\\Source\\Repos\\simuladorSO\\SimuladorSO.csproj",
+        "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\admin\\Source\\Repos\\simuladorSO\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\arlys\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],

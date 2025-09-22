@@ -1,63 +1,55 @@
-﻿namespace SimuladorSO
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+
+namespace SimuladorSO
 {
     public class RoundRobin : Escalonador
     {
-        public int Quantum { get; private set; }
-        private Simulador sim; // referência do simulador
+        private int Quantum;
+        private Simulador Sim;
 
-        public RoundRobin(int quantum, Simulador simulador)
+        public RoundRobin(int quantum, Simulador sim)
         {
-            Algoritmo = "Round Robin";
             Quantum = quantum;
-            sim = simulador;
+            Sim = sim;
+            Algoritmo = $"Round Robin com quantum = {quantum}";
         }
 
         public override void Executar(List<Processo> processos)
         {
-            Console.WriteLine($"Executando escalonador: {Algoritmo} com quantum = {Quantum}\n");
+            Console.WriteLine($"\nExecutando escalonador: {Algoritmo}");
 
-            // Fila de threads prontas
-            Queue<ThreadSimulada> filaProntos = new Queue<ThreadSimulada>();
+            var fila = new Queue<Processo>(processos);
 
-            // Colocar todas as threads na fila
-            foreach (var p in processos)
+            while (fila.Any())
             {
-                foreach (var t in p.Threads)
+                var processo = fila.Dequeue();
+
+                if (processo.Estado == "Finalizado")
+                    continue;
+
+                processo.Estado = "Executando";
+
+                int tempoExecutado = 0;
+                while (tempoExecutado < Quantum && processo.PC < processo.TempoProcessamento)
                 {
-                    filaProntos.Enqueue(t);
+                    processo.PC++;
+                    tempoExecutado++;
                 }
-            }
 
-            while (filaProntos.Count > 0)
-            {
-                var thread = filaProntos.Dequeue();
-                if (thread.Estado != "Finalizada")
+                if (processo.PC >= processo.TempoProcessamento)
                 {
-                    // Log início execução
-                    sim.LogEvento($"Thread {thread.Id} do processo {thread.ProcessoPai.TempoChegada} começou execução");
-
-                    thread.Executar();
-
-                    // Simular execução de Quantum unidades
-                    thread.PC += Quantum;
-                    thread.QuantumExecutado += Quantum;
-
-                    // Atualiza métricas básicas
-                    sim.TrocasDeContexto++;
-
-                    // Simular finalização se PC >= TempoProcessamento do processo
-                    if (thread.PC >= thread.ProcessoPai.TempoProcessamento)
-                    {
-                        thread.Finalizar();
-                        sim.LogEvento($"Thread {thread.Id} finalizou execução do processo {thread.ProcessoPai.TempoChegada}");
-                    }
-                    else
-                    {
-                        thread.Estado = "Pronto"; // retorna para fila se não terminou
-                        filaProntos.Enqueue(thread);
-                        sim.LogEvento($"Thread {thread.Id} retorna para fila (pronto)");
-                    }
+                    processo.Estado = "Finalizado";
+                    Console.WriteLine($"Processo (Chegada={processo.TempoChegada}) concluído!");
                 }
+                else
+                {
+                    processo.Estado = "Pronto";
+                    fila.Enqueue(processo);
+                }
+
+                Sim.IncrementarTrocasDeContexto();
             }
 
             Console.WriteLine("\nRound Robin concluído!");

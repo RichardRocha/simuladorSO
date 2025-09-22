@@ -6,8 +6,12 @@
 # Simulador de Sistema Operacional
 
 **SimuladorSO** é uma aplicação desenvolvida em C# que visa a simulação detalhada de escalonamento de processos, threads, gerenciamento de memória, E/S e sistema de arquivos em sistemas operacionais. Este projeto oferece uma plataforma para estudo, experimentação e análise de algoritmos clássicos de escalonamento, proporcionando uma visão prática de como os sistemas operacionais gerenciam processos, recursos de memória e dispositivos.
-
 ## Funcionalidades Principais
+
+- **Menu interativo**
+  - Interface de linha de comando com opções claras
+  - Permite gerar processos, exibir processos, executar escalonamento e ver métricas
+  - Validação de entradas do usuário para evitar erros
 
 - **Escalonamento de Processos e Threads**
   - Implementa algoritmos como **Round Robin (RR)** com quantum configurável, **Shortest Job First (SJF)** e **Shortest Process Next (SPN)**
@@ -50,6 +54,7 @@ O projeto é estruturado em classes orientadas a objetos, garantindo modularidad
 - `DispositivoES`: Representa dispositivos de E/S e filas de solicitações
 - `DiretorioSimulado` e `ArquivoSimulado`: Estrutura hierárquica de arquivos e diretórios
 - `Simulador`: Classe central que integra todos os módulos, coordenando execução, E/S, memória, arquivos e logs
+- `Program`: Menu interativo para controlar o simulador, incluindo geração de processos, execução de escalonamento e visualização de métricas
 
 ## Execução do Projeto
 
