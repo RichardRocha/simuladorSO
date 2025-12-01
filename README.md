@@ -153,6 +153,8 @@ git clone https://github.com/RichardRocha/simuladorSO.git
 cd simuladorSO
 dotnet build
 dotnet run
-
+```
+```bash
 #  UML do Programa
 ![Diagrama UML do SimuladorSO](img/uml.png)
+``` 
