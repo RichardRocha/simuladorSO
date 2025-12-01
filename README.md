@@ -154,7 +154,4 @@ cd simuladorSO
 dotnet build
 dotnet run
 ```
-```bash
-#  UML do Programa
-![Diagrama UML do SimuladorSO](img/uml.png)
-``` 
+## UML do programa ![Diagrama UML do SimuladorSO](img/uml.png)
