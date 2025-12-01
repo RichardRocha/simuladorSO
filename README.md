@@ -5,69 +5,154 @@
 
 # Simulador de Sistema Operacional
 
-**SimuladorSO** é uma aplicação desenvolvida em C# que visa a simulação detalhada de escalonamento de processos, threads, gerenciamento de memória, E/S e sistema de arquivos em sistemas operacionais. Este projeto oferece uma plataforma para estudo, experimentação e análise de algoritmos clássicos de escalonamento, proporcionando uma visão prática de como os sistemas operacionais gerenciam processos, recursos de memória e dispositivos.
-## Funcionalidades Principais
+**SimuladorSO** é uma aplicação desenvolvida em C# que visa a simulação detalhada de escalonamento de processos, threads, gerenciamento de memória, E/S e sistema de arquivos em sistemas operacionais.  
+Este projeto oferece uma plataforma para estudo, experimentação e análise de algoritmos clássicos de escalonamento, proporcionando uma visão prática de como os sistemas operacionais gerenciam processos, recursos de memória e dispositivos.
 
-- **Menu interativo**
-  - Interface de linha de comando com opções claras
-  - Permite gerar processos, exibir processos, executar escalonamento e ver métricas
-  - Validação de entradas do usuário para evitar erros
+---
 
-- **Escalonamento de Processos e Threads**
-  - Implementa algoritmos como **Round Robin (RR)** com quantum configurável, **Shortest Job First (SJF)** e **Shortest Process Next (SPN)**
-  - Contagem de trocas de contexto e logs de eventos
-  - Filas de threads prontas, com estados **Pronto, Executando, Bloqueado e Finalizado**
+# Funcionalidades Principais
 
-- **Gerenciamento de Memória**
-  - Alocação e liberação de memória para processos simulados
-  - Bloqueio de processos caso não haja memória suficiente
-  - Visualização do estado da memória antes e após execução
+## ✔️ Menu interativo
+- Interface de linha de comando com opções claras
+- Permite gerar processos, exibir processos, executar escalonamento e ver métricas
+- Validação de entradas do usuário para evitar erros
 
-- **Threads Simuladas**
-  - Threads com identificador, referência ao processo pai, contador de programa (PC) e execução por quantum
-  - Execução simulada, finalização automática e retorno à fila caso não terminem no quantum
+---
 
-- **Entrada e Saída (E/S)**
-  - Dispositivos simulados: **Disco** e **Impressora**
-  - Solicitação de E/S bloqueante sem espera ativa
-  - Logs detalhados de início e término de serviço de E/S
+## ✔️ Escalonamento de Processos e Threads
+- Round Robin (RR) com quantum configurável  
+- Shortest Job First (SJF)  
+- Shortest Process Next (SPN)  
+- First-Come First-Served (FCFS)  
+- Contagem real de trocas de contexto  
+- Logs detalhados da execução  
+- Threads com estados: **Pronto**, **Executando**, **Bloqueado**, **Finalizado**
 
-- **Sistema de Arquivos Simulado**
-  - Estrutura hierárquica de diretórios com raiz `"root"`
-  - Criação e listagem de arquivos em diretórios
-  - Suporte a metadados simplificados: **nome e tamanho**
+---
 
-- **Métricas e Logs**
-  - Logs detalhados de eventos com timestamp
-  - Incremento e contagem de **trocas de contexto**
-  - Estado final de processos e memória disponível exibidos ao término da simulação
+## ✔️ Processos (PCB)
+Cada processo possui:
 
-## Arquitetura do Sistema
+- PID incremental
+- Tempo de chegada
+- Tempo de execução
+- Memória necessária
+- Prioridade
+- Registradores simulados
+- Contador de programa (PC)
+- Estado atual
+- Threads internas
+- Tabela de arquivos abertos (simplificada)
 
-O projeto é estruturado em classes orientadas a objetos, garantindo modularidade, legibilidade e extensibilidade:
+Estados possíveis:
+- **Pronto**
+- **Executando**
+- **Bloqueado**
+- **Finalizado**
 
-- `Processo`: Representa um processo do sistema, com threads internas, tempo de chegada, tempo de execução e memória necessária
-- `ThreadSimulada`: Representa uma thread de usuário, com referência ao processo pai, estado, PC e execução por quantum
-- `Escalonador`: Classe abstrata que define a interface para algoritmos de escalonamento
-- `RoundRobin`, `ShortestJobFirst` e `ShortestProcessNext`: Implementações concretas de algoritmos de CPU
-- `GerenciadorMemoria`: Gerencia alocação, liberação e status da memória
-- `DispositivoES`: Representa dispositivos de E/S e filas de solicitações
-- `DiretorioSimulado` e `ArquivoSimulado`: Estrutura hierárquica de arquivos e diretórios
-- `Simulador`: Classe central que integra todos os módulos, coordenando execução, E/S, memória, arquivos e logs
-- `Program`: Menu interativo para controlar o simulador, incluindo geração de processos, execução de escalonamento e visualização de métricas
+---
 
-## Execução do Projeto
+## ✔️ Threads Simuladas
+- Identificador próprio  
+- Referência ao processo pai  
+- Contador de programa (PC)  
+- Estado  
+- Execução simulada por quantum  
+- Mudança automática para Finalizada quando a execução termina  
 
-1. Certifique-se de possuir o [.NET SDK](https://dotnet.microsoft.com/en-us/download) instalado.
-2. Clone o repositório:  
-   ```bash
-   git clone https://github.com/RichardRocha/simuladorSO.git
-3. Acesse o diretório do projeto:
-   ```bash
-   cd simuladorSO
-5. Compile e execute a aplicação:
-   ```bash
-   dotnet build
-   dotnet run
-## UML do programa
+---
+
+## ✔️ Gerenciamento de Memória
+- Paginação simples com:
+  - Memória total configurável
+  - Tamanho de página configurável
+  - Frames (molduras) livres e ocupados
+- Page table por processo
+- Política de alocação: **First Fit**
+- Processos são bloqueados se não houver memória suficiente
+- Liberação completa da memória ao final da execução
+- Estatísticas:
+  - Total de alocações
+  - Falhas de alocação (interpretação como falta de página)
+
+---
+
+## ✔️ Entrada e Saída (E/S)
+Dispositivos simulados:
+- Disco
+- Impressora
+
+Funcionalidades:
+- E/S bloqueante sem busy waiting
+- Fila interna de solicitações
+- Mudança automática de estado da thread (Bloqueada → Pronto)
+- Logs detalhados de início e fim de operação
+
+---
+
+## ✔️ Sistema de Arquivos Simulado
+- Diretório raiz `"root"`
+- Suporte a:
+  - Criação de arquivos
+  - Listagem de arquivos
+- Estrutura hierárquica com diretórios e arquivos
+- Metadados:
+  - Nome
+  - Tamanho
+
+---
+
+## ✔️ Métricas e Logs
+Ao final da simulação, o sistema exibe:
+
+- Tempo de retorno
+- Tempo de espera
+- Tempo de resposta
+- Prioridade
+- Trocas de contexto
+- Clock total
+- CPU ociosa
+- Utilização da CPU (%)
+- Throughput
+- Estatísticas de memória:
+  - Frames livres
+  - Total de alocações
+  - Falhas de alocação
+- Log completo com timestamps lógicos (t)
+
+---
+
+# Arquitetura do Sistema
+
+O projeto utiliza programação orientada a objetos, com as seguintes classes principais:
+
+- `Processo`
+- `ThreadSimulada`
+- `Escalonador` (abstrata)
+- `RoundRobin`, `ShortestJobFirst`, `ShortestProcessNext`, `FCFS`
+- `GerenciadorMemoria`, `Frame`
+- `DispositivoES`
+- `ArquivoSimulado`, `DiretorioSimulado`
+- `Simulador`
+- `Program` (menu interativo)
+
+Cada módulo é desacoplado e segue boas práticas de encapsulamento.
+
+---
+
+# Como Executar
+
+### Pré-requisitos
+- .NET 6 ou superior  
+Baixe em: https://dotnet.microsoft.com/en-us/download
+
+### Passos:
+
+```bash
+git clone https://github.com/RichardRocha/simuladorSO.git
+cd simuladorSO
+dotnet build
+dotnet run
+```
+## UML do programa 
 ![Diagrama UML do SimuladorSO](img/uml.png)
