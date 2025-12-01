@@ -1,34 +1,33 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
 namespace SimuladorSO
 {
-    public class ShortestJobFirst : Escalonador
+    public class FCFS : Escalonador
     {
         private Simulador Sim;
 
-        public ShortestJobFirst(Simulador sim)
+        public FCFS(Simulador sim)
         {
             Sim = sim;
-            Algoritmo = "Shortest Job First (SJF)";
+            Algoritmo = "First-Come, First-Served (FCFS)";
         }
 
         public override void Executar(List<Processo> processos)
         {
             Console.WriteLine($"\nExecutando escalonador: {Algoritmo}");
 
-            var lista = processos
+            var ordem = processos
                 .Where(p => p.Estado != "Bloqueado")
-                .OrderBy(p => p.TempoProcessamento)
+                .OrderBy(p => p.TempoChegada)
                 .ToList();
 
-            foreach (var processo in lista)
+            foreach (var processo in ordem)
             {
                 if (processo.Estado == "Finalizado")
                     continue;
 
-                // CPU ociosa até o processo chegar
                 if (Sim.Clock < processo.TempoChegada)
                 {
                     int delta = processo.TempoChegada - Sim.Clock;
@@ -43,7 +42,7 @@ namespace SimuladorSO
                 }
 
                 processo.Estado = "Executando";
-                Sim.LogEvento($"SJF: processo {processo.Id} começou execução (PC={processo.PC})");
+                Sim.LogEvento($"FCFS: processo {processo.Id} começou execução (PC={processo.PC})");
 
                 while (processo.PC < processo.TempoProcessamento)
                 {
@@ -56,11 +55,11 @@ namespace SimuladorSO
                 if (processo.TempoRetorno < 0)
                     processo.TempoRetorno = 0;
 
-                Sim.LogEvento($"SJF: processo {processo.Id} concluído (PC={processo.PC})");
+                Sim.LogEvento($"FCFS: processo {processo.Id} concluído (PC={processo.PC})");
                 Sim.IncrementarTrocasDeContexto();
             }
 
-            Console.WriteLine("\nSJF concluído!");
+            Console.WriteLine("\nFCFS concluído!");
         }
     }
 }

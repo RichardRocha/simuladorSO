@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace SimuladorSO
 {
@@ -32,6 +33,40 @@ namespace SimuladorSO
             {
                 Console.WriteLine($"[DIR] {d.Nome}");
             }
+        }
+
+        // Busca recursiva por arquivo pelo nome
+        public ArquivoSimulado? BuscarArquivo(string nome)
+        {
+            var arq = Arquivos.FirstOrDefault(a => a.Nome == nome);
+            if (arq != null) return arq;
+
+            foreach (var d in SubDiretorios)
+            {
+                var achou = d.BuscarArquivo(nome);
+                if (achou != null) return achou;
+            }
+
+            return null;
+        }
+
+        // Remove arquivo pelo nome (no diretório atual ou subdiretórios)
+        public bool RemoverArquivo(string nome)
+        {
+            var arq = Arquivos.FirstOrDefault(a => a.Nome == nome);
+            if (arq != null)
+            {
+                Arquivos.Remove(arq);
+                return true;
+            }
+
+            foreach (var d in SubDiretorios)
+            {
+                if (d.RemoverArquivo(nome))
+                    return true;
+            }
+
+            return false;
         }
     }
 }

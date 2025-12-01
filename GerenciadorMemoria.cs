@@ -1,43 +1,84 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace SimuladorSO
 {
+    public class Frame
+    {
+        public int Index { get; private set; }
+        public bool Free { get; set; } = true;
+        public int? OwnerProcessId { get; set; } = null;
+
+        public Frame(int idx)
+        {
+            Index = idx;
+        }
+    }
+
     public class GerenciadorMemoria
     {
         public int MemoriaTotal { get; private set; }
-        public int MemoriaDisponivel { get; private set; }
+        public int PageSize { get; private set; }
+        public int NumFrames { get; private set; }
+        public List<Frame> Frames { get; private set; } = new List<Frame>();
 
-        public GerenciadorMemoria(int memoriaTotal)
+        public int TotalAlocacoes { get; private set; } = 0;
+        public int FalhasAlocacao { get; private set; } = 0;
+
+        public GerenciadorMemoria(int memoriaTotal, int pageSize)
         {
+            if (pageSize <= 0) throw new ArgumentException("pageSize deve ser > 0");
             MemoriaTotal = memoriaTotal;
-            MemoriaDisponivel = memoriaTotal;
+            PageSize = pageSize;
+
+            NumFrames = Math.Max(1, MemoriaTotal / PageSize);
+            for (int i = 0; i < NumFrames; i++)
+                Frames.Add(new Frame(i));
+        }
+
+        public int PagesNeeded(Processo p)
+        {
+            return (p.MemoriaNecessaria + PageSize - 1) / PageSize;
         }
 
         public bool Alocar(Processo p)
         {
-            if (p.MemoriaNecessaria <= MemoriaDisponivel)
+            int need = PagesNeeded(p);
+
+            var freeFrames = Frames.Where(f => f.Free).ToList();
+            if (freeFrames.Count < need)
             {
-                MemoriaDisponivel -= p.MemoriaNecessaria;
-                Console.WriteLine($"Memória alocada para processo (Memória usada: {p.MemoriaNecessaria})");
-                return true;
-            }
-            else
-            {
-                Console.WriteLine($"Memória insuficiente para processo (Necessário: {p.MemoriaNecessaria}, Disponível: {MemoriaDisponivel})");
+                FalhasAlocacao++;
                 return false;
             }
+
+            var alocados = freeFrames.Take(need).ToList();
+            foreach (var f in alocados)
+            {
+                f.Free = false;
+                f.OwnerProcessId = p.Id;
+                p.PageTable.Add(f.Index);
+            }
+
+            TotalAlocacoes++;
+            return true;
         }
 
         public void Liberar(Processo p)
         {
-            MemoriaDisponivel += p.MemoriaNecessaria;
-            Console.WriteLine($"Memória liberada do processo (Memória liberada: {p.MemoriaNecessaria})");
+            foreach (var f in Frames.Where(ff => ff.OwnerProcessId == p.Id))
+            {
+                f.Free = true;
+                f.OwnerProcessId = null;
+            }
+            p.PageTable.Clear();
         }
 
         public void MostrarStatus()
         {
-            Console.WriteLine($"[Memória] Total: {MemoriaTotal}, Disponível: {MemoriaDisponivel}");
+            Console.WriteLine($"[Memória] Total: {MemoriaTotal}, PageSize: {PageSize}, Frames: {NumFrames}, Alocações: {TotalAlocacoes}, Falhas: {FalhasAlocacao}");
+            Console.WriteLine($"Frames livres: {Frames.Count(f => f.Free)} / {NumFrames}");
         }
     }
-
 }

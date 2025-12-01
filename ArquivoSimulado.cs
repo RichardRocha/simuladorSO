@@ -1,3 +1,5 @@
+using System;
+
 namespace SimuladorSO
 {
     public class ArquivoSimulado
@@ -14,7 +16,7 @@ namespace SimuladorSO
 
         public void ExibirInfo()
         {
-            Console.WriteLine($"Arquivo: {Nome}, Tamanho: {Tamanho}, Conteúdo: {Conteudo}");
+            Console.WriteLine($"Arquivo: {Nome}, Tamanho: {Tamanho}, Conteúdo: \"{Conteudo}\"");
         }
     }
 }
